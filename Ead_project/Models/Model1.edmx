@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WeddingModel9.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="admin_login">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="check_info">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="wed_date" Type="date" />
+          <Property Name="wed_time" Type="time" Precision="7" />
+          <Property Name="city" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="mobile" Type="varchar" MaxLength="50" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Images">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="path" Type="nvarchar" MaxLength="50" />
+          <Property Name="method" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Register">
+          <Key>
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="cnic" Type="nvarchar" MaxLength="50" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="p_address" Type="nvarchar" MaxLength="50" />
+          <Property Name="t_address" Type="nvarchar" MaxLength="50" />
+          <Property Name="theme_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="color_com" Type="nvarchar" MaxLength="50" />
+          <Property Name="seating_arr" Type="nvarchar" MaxLength="50" />
+          <Property Name="stage_arr" Type="nvarchar" MaxLength="50" />
+          <Property Name="stage_lit" Type="nvarchar" MaxLength="50" />
+          <Property Name="budget" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Registeration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="cnic" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="p_address" Type="nvarchar" MaxLength="50" />
+          <Property Name="t_address" Type="nvarchar" MaxLength="50" />
+          <Property Name="theme_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="color_combination" Type="nchar" MaxLength="10" />
+          <Property Name="seating_arrangement" Type="nvarchar" MaxLength="50" />
+          <Property Name="stage_arrangemenet" Type="nvarchar" MaxLength="50" />
+          <Property Name="stage_lightening" Type="nvarchar" MaxLength="50" />
+          <Property Name="budget" Type="int" />
+        </EntityType>
+        <EntityType Name="Signup">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="fname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="lname" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="rpassword" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Theme">
+          <Key>
+            <PropertyRef Name="Theme_id" />
+          </Key>
+          <Property Name="theme_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="color_combination" Type="nvarchar" MaxLength="50" />
+          <Property Name="seating_arrangnment" Type="nvarchar" MaxLength="50" />
+          <Property Name="stage_arrangnment" Type="nvarchar" MaxLength="50" />
+          <Property Name="stage_seating" Type="nvarchar" MaxLength="50" />
+          <Property Name="stage_lightening" Type="nvarchar" MaxLength="50" />
+          <Property Name="budget" Type="int" />
+          <Property Name="Theme_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="WeddingModel9StoreContainer">
+          <EntitySet Name="admin_login" EntityType="Self.admin_login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="check_info" EntityType="Self.check_info" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Images" EntityType="Self.Images" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Register" EntityType="Self.Register" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Registeration" EntityType="Self.Registeration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Signup" EntityType="Self.Signup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Theme" EntityType="Self.Theme" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WeddingModel9" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="admin_login">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="check_info">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="wed_date" Type="DateTime" Precision="0" />
+          <Property Name="wed_time" Type="Time" Precision="7" />
+          <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Image">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="path" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="method" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Register">
+          <Key>
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cnic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="p_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="t_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="theme_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="color_com" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="seating_arr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="stage_arr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="stage_lit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="budget" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Registeration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cnic" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="p_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="t_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="theme_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="color_combination" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="seating_arrangement" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="stage_arrangemenet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="stage_lightening" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="budget" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Signup">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="fname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="rpassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Theme">
+          <Key>
+            <PropertyRef Name="Theme_id" />
+          </Key>
+          <Property Name="theme_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="color_combination" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="seating_arrangnment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="stage_arrangnment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="stage_seating" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="stage_lightening" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="budget" Type="Int32" />
+          <Property Name="Theme_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="WeddingEntities14" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="admin_login" EntityType="Self.admin_login" />
+          <EntitySet Name="check_info" EntityType="Self.check_info" />
+          <EntitySet Name="Contacts" EntityType="Self.Contact" />
+          <EntitySet Name="Images" EntityType="Self.Image" />
+          <EntitySet Name="Registers" EntityType="Self.Register" />
+          <EntitySet Name="Registerations" EntityType="Self.Registeration" />
+          <EntitySet Name="Signups" EntityType="Self.Signup" />
+          <EntitySet Name="Themes" EntityType="Self.Theme" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WeddingModel9StoreContainer" CdmEntityContainer="WeddingEntities14">
+          <EntitySetMapping Name="admin_login">
+            <EntityTypeMapping TypeName="WeddingModel9.admin_login">
+              <MappingFragment StoreEntitySet="admin_login">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="check_info">
+            <EntityTypeMapping TypeName="WeddingModel9.check_info">
+              <MappingFragment StoreEntitySet="check_info">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="wed_date" ColumnName="wed_date" />
+                <ScalarProperty Name="wed_time" ColumnName="wed_time" />
+                <ScalarProperty Name="city" ColumnName="city" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contacts">
+            <EntityTypeMapping TypeName="WeddingModel9.Contact">
+              <MappingFragment StoreEntitySet="Contact">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Images">
+            <EntityTypeMapping TypeName="WeddingModel9.Image">
+              <MappingFragment StoreEntitySet="Images">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="method" ColumnName="method" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Registers">
+            <EntityTypeMapping TypeName="WeddingModel9.Register">
+              <MappingFragment StoreEntitySet="Register">
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="cnic" ColumnName="cnic" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="p_address" ColumnName="p_address" />
+                <ScalarProperty Name="t_address" ColumnName="t_address" />
+                <ScalarProperty Name="theme_name" ColumnName="theme_name" />
+                <ScalarProperty Name="color_com" ColumnName="color_com" />
+                <ScalarProperty Name="seating_arr" ColumnName="seating_arr" />
+                <ScalarProperty Name="stage_arr" ColumnName="stage_arr" />
+                <ScalarProperty Name="stage_lit" ColumnName="stage_lit" />
+                <ScalarProperty Name="budget" ColumnName="budget" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Registerations">
+            <EntityTypeMapping TypeName="WeddingModel9.Registeration">
+              <MappingFragment StoreEntitySet="Registeration">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="cnic" ColumnName="cnic" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="p_address" ColumnName="p_address" />
+                <ScalarProperty Name="t_address" ColumnName="t_address" />
+                <ScalarProperty Name="theme_name" ColumnName="theme_name" />
+                <ScalarProperty Name="color_combination" ColumnName="color_combination" />
+                <ScalarProperty Name="seating_arrangement" ColumnName="seating_arrangement" />
+                <ScalarProperty Name="stage_arrangemenet" ColumnName="stage_arrangemenet" />
+                <ScalarProperty Name="stage_lightening" ColumnName="stage_lightening" />
+                <ScalarProperty Name="budget" ColumnName="budget" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Signups">
+            <EntityTypeMapping TypeName="WeddingModel9.Signup">
+              <MappingFragment StoreEntitySet="Signup">
+                <ScalarProperty Name="fname" ColumnName="fname" />
+                <ScalarProperty Name="lname" ColumnName="lname" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="rpassword" ColumnName="rpassword" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Themes">
+            <EntityTypeMapping TypeName="WeddingModel9.Theme">
+              <MappingFragment StoreEntitySet="Theme">
+                <ScalarProperty Name="theme_name" ColumnName="theme_name" />
+                <ScalarProperty Name="color_combination" ColumnName="color_combination" />
+                <ScalarProperty Name="seating_arrangnment" ColumnName="seating_arrangnment" />
+                <ScalarProperty Name="stage_arrangnment" ColumnName="stage_arrangnment" />
+                <ScalarProperty Name="stage_seating" ColumnName="stage_seating" />
+                <ScalarProperty Name="stage_lightening" ColumnName="stage_lightening" />
+                <ScalarProperty Name="budget" ColumnName="budget" />
+                <ScalarProperty Name="Theme_id" ColumnName="Theme_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

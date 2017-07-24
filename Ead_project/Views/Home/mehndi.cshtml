@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "mehndi";
+}
+@model List<Ead_project.Models.Image>
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Free Brighton Website Template | Services :: w3layouts</title>
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body id="admin">
+ <div id="content" style="background:lightskyblue">			<br><br>																																																																																																																																																																											
+        <div> 
+            @foreach (var item in Model)
+            {
+                <form method="post" action="/Home/onmehndi_theme">
+                    <div class="col_1_of_bottom span_1_of_bottom">
+                        <img src="@item.path" alt="">
+                        <div class="main_link">
+                            <h5>Mehndi Theme</h5>
+                            <p>Choose from any of our extensive range themes. Select this </p>
+                           <a href="~/Home/mehndi_theme?t_id=@item.Id">More Information</a>
+                           
+                        </div>
+
+                    </div>
+        
+                </form>
+            }
+                </div>
+             
+</div>
+ <div class="clear"></div>
+
+</body>
+</html>

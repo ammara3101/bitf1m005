@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "mehndi_theme2";
+}
+@model Ead_project.Models.Theme
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Free Brighton Website Template | Services :: w3layouts</title>
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body id="admin">
+
+    <div class="col_1_of_bottom span_1_of_bottom">
+        <img src="~/Images/mehndi2.jpg" alt="">
+    </div>
+
+    <p class="heading_theme">Theme Information </p>
+    <div class="property">
+        <p>
+            Theme Name: <br><br>
+            Color Combination: <br><br>
+            Seating Arrangement:<br><br>
+            Stage Arrangement:<br><br>
+            Stage Seating:<br><br>
+            Stage Lightening:<br><br>
+            Budget:
+        </p>
+    </div>
+    <div class="value">
+        @using (@Html.BeginForm())
+        {
+
+            <form action="/Home/onmehndi_theme2" method="post">
+                @Model.theme_name<br><br>
+                @Model.color_combination<br><br>
+                @Model.seating_arrangnment<br><br>
+                @Model.stage_arrangnment<br><br>
+                @Model.stage_seating<br><br>
+                @Model.stage_lightening<br><br>
+                @Model.budget<br><br>
+            </form>
+        }
+    </div><br><br /><br><br />
+    <div class="reg_btn">
+
+        @Html.ActionLink("Register", "Registeration", "Home")
+        @Html.ActionLink("Cancel", "Events", "Home")
+    </div>
+    <div class="clear"></div>
+
+</body>
+</html>
+

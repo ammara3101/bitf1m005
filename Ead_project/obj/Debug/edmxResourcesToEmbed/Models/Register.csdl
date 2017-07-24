@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WeddingModel3" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Jiy">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Register">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cnic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="p_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="t_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="theme" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Theme1" Relationship="Self.fk_theme_register" FromRole="Register" ToRole="Theme" />
+  </EntityType>
+  <EntityType Name="Signup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="fname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="lname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rpassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Test">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Theme">
+    <Key>
+      <PropertyRef Name="Theme_id" />
+    </Key>
+    <Property Name="theme_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="color_combination" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="seating_arrangnment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="stage_arrangnment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="stage_seating" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="stage_lightening" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="budget" Type="Int32" />
+    <Property Name="Theme_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Registers" Relationship="Self.fk_theme_register" FromRole="Theme" ToRole="Register" />
+  </EntityType>
+  <Association Name="fk_theme_register">
+    <End Role="Theme" Type="Self.Theme" Multiplicity="1" />
+    <End Role="Register" Type="Self.Register" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Theme">
+        <PropertyRef Name="Theme_id" />
+      </Principal>
+      <Dependent Role="Register">
+        <PropertyRef Name="theme" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WeddingEntities8" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Contacts" EntityType="Self.Contact" />
+    <EntitySet Name="Jiys" EntityType="Self.Jiy" />
+    <EntitySet Name="Registers" EntityType="Self.Register" />
+    <EntitySet Name="Signups" EntityType="Self.Signup" />
+    <EntitySet Name="Tests" EntityType="Self.Test" />
+    <EntitySet Name="Themes" EntityType="Self.Theme" />
+    <AssociationSet Name="fk_theme_register" Association="Self.fk_theme_register">
+      <End Role="Theme" EntitySet="Themes" />
+      <End Role="Register" EntitySet="Registers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

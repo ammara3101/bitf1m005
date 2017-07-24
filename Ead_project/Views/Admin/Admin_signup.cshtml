@@ -1,0 +1,42 @@
+﻿@model Ead_project.Models.Signup
+
+@{
+    ViewBag.Title = "Admin_signup";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Free Brighton Website Template | Services :: w3layouts</title>
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body id="admin">
+    <div>
+        <div class="signdiv">
+            <form class="f" method="Post" action="@Html.ActionLink("Admin_index", "Admin_index", "Admin")">
+                <p class="f1">
+                    Sign up<br>
+                    It's free and always will be!!
+                </p><br><br><br><br><br><br>
+                First Name <br>
+                <input type="text" name="fname" id="name" alpha required /><span id="errname" style="color:red;"></span><br><br>
+                Last Name <br><input type="text" name="lname" id="name" alpha required /><span id="errname" style="color:red;"></span><br><br>
+                Email<br><input type="email" name="email" id="email" placeholder="Example@email.com" required /><span id="errmail" style="color:red;"></span><br><br>
+                New Password<br><input type="password" name="password" id="password" required /><span id="errpwd" style="color:red;"></span><br><br>
+                Confirm Password<br><input type="password" name="rpassword" id="password" required /><span id="errpwd" style="color:red;"></span><br>
+                Gender<br><br><input type="radio" name="gender" value="male" checked>Male
+                <input type="radio" name="gender" value="female">Female<br><br>
+                Phone<br><input type="text" name="phone1" id="phone" placeholder="03XX-XXXXXXX" /><span id="errmob" style="color:red;"></span><br>
+
+                <button type="submit" name="signUp" value="signUp" id="btn1" onclick="myFunction1()">Sign Up</button>
+                <button type="submit" name="cancel" value="cancel" id="btn1">Cancel</button>
+
+            </form>
+        </div>
+    </div>
+    <div class="clear"></div>
+</body>
+</html>

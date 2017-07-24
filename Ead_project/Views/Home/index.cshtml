@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Ttile = "index";
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Free Brighton Website Template | Home :: w3layouts</title>
+<link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--slider-->
+
+    <link href="~/Content/flexslider.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/jquery.fancybox.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+<!-- jQuery -->
+ <script src="~/Script/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+  <!-- FlexSlider -->
+  <script src="~/Script/jquery.flexslider.js"></script>
+  <script type="text/javascript">
+
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+ 
+ <div class="container" >
+	    <div class="flexslider">
+	          <ul class="slides">
+	            <li><img src="~/Images/banner1.jpg" alt=""/></li>
+	  	    	<li><img src="~/Images/banner4.jpg" alt="" /></li>
+	  	    	<li><img src="~/Images/banner3.jpg" alt="" /></li>
+	  	    	<li><img src="~/Images/banner2.jpg" alt="" /></li>
+	          </ul>
+	    </div>
+  </div>
+    <marquee>
+        <img src="~/Images/banner1.jpg" alt="Not found" />
+        <img src="~/Images/banner4.jpg" alt="Not found" />
+        <img src="~/Images/banner3.jpg" alt="Not found" />
+        <img src="~/Images/banner2.jpg" alt="Not found" />
+    </marquee>
+   <div class="content-top">
+		<div class="wrap">
+			<div class="content-topbox">
+				<div class="col_1_of_bottom span_1_of_last">
+					<img src="~/Images/pic3.jpg" alt="">
+				     <div class="main_link1">
+						<h5>Mehndi Events</h5>
+						<p>Choose from any of our extensive range </p>
+						@Html.ActionLink("read more", "mehndi", "Home")
+					</div>
+				</div>
+				<div class="col_1_of_bottom span_1_of_bottom">
+                    <img src="~/Images/pic7.jpg" alt="">
+				     <div class="main_link">
+						<h5>Shadi Events</h5>
+						<p>Choose from any of our extensive range </p>
+						@Html.ActionLink("read more", "mehndi", "Home")
+					</div>
+					
+				  </div>
+				<div class="col_1_of_bottom span_1_of_bottom">
+                    <img src="~/Images/pic2.jpg" alt="">
+				     <div class="main_link">
+					<h5>Walima Events</h5>
+						<p>Choose from any of our extensive range </p>
+						@Html.ActionLink("read more", "mehndi", "Home")
+					</div>
+				</div>
+				  <div class="clear"></div> 
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
+
+    	
+    	
+            

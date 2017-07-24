@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "show_register_theme";
+}
+@model List<Ead_project.Models.Registeration>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Free Brighton Website Template | Services :: w3layouts</title>
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body id="admin"
+      >
+    <br><br><br><br>
+    <p class="f1" style="color:deeppink">
+        All Users details!!
+    </p><br><br> <br><br>
+    <div class="table_div">
+        <table class="show_table">
+            <tr>
+                <th>Name</th>
+                <th>email</th>
+                <th>Theme_name</th>
+                <th>Color Combination</th>
+                <th>Seating Arragnment</th>
+                <th>Stage Arragnment</th>
+                <th>Stage Lightenig</th>
+                <th>Budget</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td>@item.name</td>
+                    <td>@item.email</td>
+                    <td>@item.theme_name</td>
+                    <td>@item.color_combination</td>
+                    <td>@item.seating_arrangement</td>
+                    <td>@item.stage_arrangemenet</td>
+                    <td>@item.stage_lightening</td>
+                    <td>@item.budget</td>
+                </tr>
+            }
+        </table>
+
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+    <div class="clear"></div>
+</body>
+</html>
+

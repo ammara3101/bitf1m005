@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WeddingModel5StoreContainer" CdmEntityContainer="WeddingEntities10">
+    <EntitySetMapping Name="admin_login">
+      <EntityTypeMapping TypeName="WeddingModel5.admin_login">
+        <MappingFragment StoreEntitySet="admin_login">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="WeddingModel5.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Images">
+      <EntityTypeMapping TypeName="WeddingModel5.Image">
+        <MappingFragment StoreEntitySet="Images">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="path" ColumnName="path" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registers">
+      <EntityTypeMapping TypeName="WeddingModel5.Register">
+        <MappingFragment StoreEntitySet="Register">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="cnic" ColumnName="cnic" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="p_address" ColumnName="p_address" />
+          <ScalarProperty Name="t_address" ColumnName="t_address" />
+          <ScalarProperty Name="theme_name" ColumnName="theme_name" />
+          <ScalarProperty Name="color_com" ColumnName="color_com" />
+          <ScalarProperty Name="seating_arr" ColumnName="seating_arr" />
+          <ScalarProperty Name="stage_arr" ColumnName="stage_arr" />
+          <ScalarProperty Name="stage_lit" ColumnName="stage_lit" />
+          <ScalarProperty Name="budget" ColumnName="budget" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registerations">
+      <EntityTypeMapping TypeName="WeddingModel5.Registeration">
+        <MappingFragment StoreEntitySet="Registeration">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="cnic" ColumnName="cnic" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="p_address" ColumnName="p_address" />
+          <ScalarProperty Name="t_address" ColumnName="t_address" />
+          <ScalarProperty Name="theme_name" ColumnName="theme_name" />
+          <ScalarProperty Name="color_combination" ColumnName="color_combination" />
+          <ScalarProperty Name="seating_arrangement" ColumnName="seating_arrangement" />
+          <ScalarProperty Name="stage_arrangemenet" ColumnName="stage_arrangemenet" />
+          <ScalarProperty Name="stage_lightening" ColumnName="stage_lightening" />
+          <ScalarProperty Name="budget" ColumnName="budget" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Signups">
+      <EntityTypeMapping TypeName="WeddingModel5.Signup">
+        <MappingFragment StoreEntitySet="Signup">
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="rpassword" ColumnName="rpassword" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Themes">
+      <EntityTypeMapping TypeName="WeddingModel5.Theme">
+        <MappingFragment StoreEntitySet="Theme">
+          <ScalarProperty Name="theme_name" ColumnName="theme_name" />
+          <ScalarProperty Name="color_combination" ColumnName="color_combination" />
+          <ScalarProperty Name="seating_arrangnment" ColumnName="seating_arrangnment" />
+          <ScalarProperty Name="stage_arrangnment" ColumnName="stage_arrangnment" />
+          <ScalarProperty Name="stage_seating" ColumnName="stage_seating" />
+          <ScalarProperty Name="stage_lightening" ColumnName="stage_lightening" />
+          <ScalarProperty Name="budget" ColumnName="budget" />
+          <ScalarProperty Name="Theme_id" ColumnName="Theme_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

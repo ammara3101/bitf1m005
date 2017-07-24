@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WeddingModel6.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="admin_login">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="mobile" Type="varchar" MaxLength="50" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Images">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="path" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Register">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cnic" Type="nvarchar" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="p_address" Type="nvarchar" MaxLength="50" />
+    <Property Name="t_address" Type="nvarchar" MaxLength="50" />
+    <Property Name="theme_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="color_com" Type="nvarchar" MaxLength="50" />
+    <Property Name="seating_arr" Type="nvarchar" MaxLength="50" />
+    <Property Name="stage_arr" Type="nvarchar" MaxLength="50" />
+    <Property Name="stage_lit" Type="nvarchar" MaxLength="50" />
+    <Property Name="budget" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Registeration">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="cnic" Type="int" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="p_address" Type="nvarchar" MaxLength="50" />
+    <Property Name="t_address" Type="nvarchar" MaxLength="50" />
+    <Property Name="theme_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="color_combination" Type="nchar" MaxLength="10" />
+    <Property Name="seating_arrangement" Type="nvarchar" MaxLength="50" />
+    <Property Name="stage_arrangemenet" Type="nvarchar" MaxLength="50" />
+    <Property Name="stage_lightening" Type="nvarchar" MaxLength="50" />
+    <Property Name="budget" Type="int" />
+  </EntityType>
+  <EntityType Name="Signup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="fname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="lname" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="rpassword" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Theme">
+    <Key>
+      <PropertyRef Name="Theme_id" />
+    </Key>
+    <Property Name="theme_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="color_combination" Type="nvarchar" MaxLength="50" />
+    <Property Name="seating_arrangnment" Type="nvarchar" MaxLength="50" />
+    <Property Name="stage_arrangnment" Type="nvarchar" MaxLength="50" />
+    <Property Name="stage_seating" Type="nvarchar" MaxLength="50" />
+    <Property Name="stage_lightening" Type="nvarchar" MaxLength="50" />
+    <Property Name="budget" Type="int" />
+    <Property Name="Theme_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="WeddingModel6StoreContainer">
+    <EntitySet Name="admin_login" EntityType="Self.admin_login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Images" EntityType="Self.Images" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Register" EntityType="Self.Register" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Registeration" EntityType="Self.Registeration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Signup" EntityType="Self.Signup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Theme" EntityType="Self.Theme" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

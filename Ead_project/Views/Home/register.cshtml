@@ -1,0 +1,68 @@
+﻿@*@{
+    ViewBag.Title = "register";
+}
+@model List<Ead_project.Models.check_info>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Free Brighton Website Template | Services :: w3layouts</title>
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body id="admin">
+    <br><br><br><br><br><br>
+    <div class="headline">
+        <div class="content">
+            <div class="signdiv">
+                <form class="f" method="Post" action="/Home/onservices">
+                    <p class="f1">
+                        Register YourSelf!!</p><br><br><br><br>
+                       <p style="text-align:center;color:red"> Date, Time And Location choice from there!!
+                    </p><br><br />
+@foreach (var item in Model)
+            {a
+
+                   <p> Select Suitable Date</p><br>
+                    <select name="w_date">
+                        <option value="1">@item.wed_date</option>
+                    </select>
+                    <br><br>
+                    <p>Select Suitable Time</p><br>
+                    <select name="w_time">
+                        <option value="1">@item.wed_time</option>
+                        <option value="2">Singhi</option>
+                        <option value="3">Balochi</option>
+                        <option value="4">Pashto </option>
+                        <option value="5">Disco</option>
+                        <option value="6">Ramp</option>
+                        <option value="more">Other</option>
+                    </select>
+                    <br><br>
+                    <p>Select Your City</p> <br>
+                    <select name="city">
+                        <option value="1">@item.city</option>
+                        <option value="2">Karachi</option>
+                        <option value="3">Islamabad</option>
+                        <option value="4">Multan</option>
+                        <option value="5">Layyah</option>
+                    </select>
+                    <br><br>
+            }
+                    Enter Your Location<br><input type="text" name="loc" id="loc" required /><span id="errname" style="color:red;"></span><br><br>
+
+                    <button type="submit" name="register" value="register" id="btn1" onclick="myFunction1()">Register</button>
+                    <button type="submit" name="cancel" value="cancel" id="btn1">Cancel</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+</body>
+</html>*@
+
+
+
+

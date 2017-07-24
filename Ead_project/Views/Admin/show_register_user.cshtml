@@ -1,0 +1,82 @@
+﻿@model List<Ead_project.Models.Registeration>
+@{
+    ViewBag.Title = "show_register_user";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Free Brighton Website Template | Services :: w3layouts</title>
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+<body id="admin">
+    <script src="/Scripts/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+
+            $("#ajax_btn").click(function () {
+                $.ajax('@Url.Action("show_theme")', {
+
+                    success: function (result) {
+                        $("#ajax_show").html(result)
+                    },
+
+                });
+            });
+
+
+        });
+
+    </script>
+    <br><br><br><br>
+    <p class="f1" style="color:deeppink">
+        All Users details!!
+    </p><br><br> <br><br>
+    <div class="table_div">
+        <table class="show_table">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Cnic</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th>Permenent address</th>
+                <th>Temporary address</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td>@item.name</td>
+                    <td>@item.email</td>
+                    <td></td>
+                    <td>@item.gender</td>
+                    <td>@item.phone</td>
+                    <td>@item.p_address</td>
+                    <td>@item.t_address</td>
+                </tr>
+
+            }
+        </table>
+        <div class="more">
+            <input class="btn btn-primary" type="button" value="Show Updated " name="ajax_btn" id="ajax_btn" style="margin-left:500px"></>
+        </div>
+
+    </div><br><br><br>
+    <div id="ajax_show">
+
+    </div>
+
+
+
+    <br><br><br><br><br><br><br><br>
+    <div class="clear"></div>
+</body>
+
+</html>

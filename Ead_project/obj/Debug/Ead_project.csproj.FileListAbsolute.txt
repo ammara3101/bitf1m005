@@ -1,0 +1,21 @@
+C:\Users\Jiya khan\documents\visual studio 2013\Projects\Ead_project\Ead_project\bin\Ead_project.dll.config
+C:\Users\Jiya khan\documents\visual studio 2013\Projects\Ead_project\Ead_project\bin\Ead_project.dll
+C:\Users\Jiya khan\documents\visual studio 2013\Projects\Ead_project\Ead_project\bin\Ead_project.pdb
+C:\Users\Jiya khan\documents\visual studio 2013\Projects\Ead_project\Ead_project\obj\Debug\Ead_project.dll
+C:\Users\Jiya khan\documents\visual studio 2013\Projects\Ead_project\Ead_project\obj\Debug\Ead_project.pdb
+C:\Users\Jiya khan\documents\visual studio 2013\Projects\Ead_project\Ead_project\obj\Debug\Ead_project.csprojResolveAssemblyReference.cache
+E:\books\6th semster\EAD\EAD_Project\Ead_project\Ead_project\obj\Debug\Ead_project.csprojResolveAssemblyReference.cache
+E:\books\6th semster\EAD\EAD_Project\Ead_project\Ead_project\obj\Debug\Ead_project.dll
+E:\books\6th semster\EAD\EAD_Project\Ead_project\Ead_project\obj\Debug\Ead_project.pdb
+D:\Ead_project\Ead_project\obj\Debug\Ead_project.csprojResolveAssemblyReference.cache
+D:\Ead_project\Ead_project\obj\Debug\Ead_project.dll
+D:\Ead_project\Ead_project\obj\Debug\Ead_project.pdb
+D:\Ead_project\Ead_project\bin\Ead_project.dll.config
+D:\Ead_project\Ead_project\bin\Ead_project.dll
+D:\Ead_project\Ead_project\bin\Ead_project.pdb
+F:\6th sem\EAD\Ead_project\Ead_project\obj\Debug\Ead_project.csprojResolveAssemblyReference.cache
+F:\6th sem\EAD\Ead_project\Ead_project\obj\Debug\Ead_project.dll
+F:\6th sem\EAD\Ead_project\Ead_project\obj\Debug\Ead_project.pdb
+F:\6th sem\EAD\Ead_project\Ead_project\bin\Ead_project.dll.config
+F:\6th sem\EAD\Ead_project\Ead_project\bin\Ead_project.dll
+F:\6th sem\EAD\Ead_project\Ead_project\bin\Ead_project.pdb

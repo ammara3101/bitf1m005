@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+   
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+</head>
+<body>
+    <div class="header">
+        <div class="wrap">
+            <div class="logo">
+
+                <a href="index.html"><img src="~/Images/logo.png" alt="" /></a>
+            </div>
+            <div class="top-nav">
+                <div class="menu">
+                    <ul>
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "index" ? "active" : "")">
+                            @Html.ActionLink("Home", "Index", "Home")
+                        </li>
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "about" ? "active" : "")">
+                            @Html.ActionLink("About", "about", "Home")
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "services" ? "active" : "")">
+                            @Html.ActionLink("services", "services", "Home")
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "gallery" ? "active" : "")">
+                            @Html.ActionLink("gallery", "gallery", "Home")
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "contact" ? "active" : "")">
+                            @Html.ActionLink("Contact", "contact", "Home")
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Admin" ? "active" : "")">
+                            @Html.ActionLink("Admin", "Admin_index", "Admin")
+
+</ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+          
+        </div>
+    </div>	
+    @RenderBody()
+
+    <div class="copy-right">
+        <div class="wrap">
+            <p class="copy"><span>Brighton</span> © All Rights Reseverd</p> <p class="design"> Design by  <a href="http://w3layouts.com">W3Layouts</a></p>
+            <div class="clear"></div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,87 @@
+﻿@model Ead_project.Models.Registeration
+
+@{
+    ViewBag.Title = "Registeration";
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Free Brighton Website Template | Services :: w3layouts</title>
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body id="admin">
+
+    <form class="f_r" method="post" action="/Home/onregister">
+        <p class="f1">
+            Want to register For Any Event!!<br>
+            Please fill out the form below
+        </p>
+        <div class="form_div">
+            Name<br><input type="text" id="name" name="name" required /><span id="errname" style="color:red;"></span><br><br>
+            CNIC<br><input type="text" id="name" name="cnic" placeholder="XXXXX-XXXXXXX-X" required /><span id="errpwd" style="color:red;"></span><br><br>
+            Email<br><input type="email" id="email" name="email" placeholder="example@gmail.com" required /><span id="errmail" style="color:red;"></span><br><br>
+            Gender<br><input type="radio" name="gender" value="male" checked>Male
+            <input type="radio" name="gender" value="female">Female<br><br>
+            Phone #<br><input type="text" id="phone" name="phone" placeholder="03XX-XXXXXXX" required /><span id="errmob" style="color:red;"></span><br><br>
+            Permanent Address<br><input type="text" id="add" name="p_address" required><br><br>
+            Temporary Address<br><input type="text" id="add" name="t_address" required><br><br>
+            Comments:<br> <textarea rows="8" cols="35"> </textarea><br><br>
+
+            <button type="submit" id="btn1" name="register" value="register" onclick="CheckIt()">Register</button>&nbsp &nbsp &nbsp
+            <a href="Profile.jsp" id="btn3">Profile</a>&nbsp &nbsp &nbsp
+            <a href="LogIn.jsp" id="btn3">Cancel</a><br><br><br><br>
+        </div>
+        <div class="rightside">
+            Wedding Theme Name <br><select name="theme_name">
+                <option value="1">Punjabi</option>
+                <option value="2">Singhi</option>
+                <option value="3">Balochi</option>
+                <option value="4">Pashto </option>
+                <option value="5">Disco</option>
+                <option value="6">Ramp</option>
+                <option value="more">Other</option>
+            </select>
+            <br><br>
+            Your Budget<br><input type="text" id="budget" name="budget"><br><br>
+
+            Color Combination<br><select name="color_combination">
+                <option value="1">Yellow and Pink</option>
+                <option value="2">Green and Purple</option>
+                <option value="3">Green and Orange</option>
+                <option value="4">Yellow,Green and Red </option>
+                <option value="5">Yellow and Green</option>
+                <option value="6">Yellow and Red</option>
+                <option value="more">Other</option>
+            </select><br><br>
+
+            Seating Arrangement<br>
+            <br><input type="radio" name="seat_arrangement" value="floor" checked>Floor Seating <br>
+            <input type="radio" name="seat_arrangement" value="amp">Amphitheater Seating (Chairs seating)<br><br>
+
+            Stage Arrangement<br><select name="stage_arrangement">
+                <option value="1">Roses Bokah</option>
+                <option value="2">Curtains</option>
+                <option value="3">Roses Bokah and Curtains</option>
+                <option value="4">Flowers Bokah and Curtains </option>
+                <option value="5">Ballons And Curtains</option>
+                <option value="6">Ballons and Bookah</option>
+                <option value="more">Other</option>
+            </select>
+            <br><br>
+
+            Stage Lightening Arrangement<br>
+            <br><input type="radio" name="stage_lightening" value="dim" checked> Dim Lightening<br>
+            <input type="radio" name="stage_lightening" value=" full">Full Bright Lightening<br>
+            <input type="radio" name="stage_lightening" value=" colorful">ColorFull Lightening<br>
+            <br><br><br>
+              <p style="font-size:smaller;color:red"> @ViewBag.ok </p><br>
+
+            <br><br><br><br><br><br><br><br><br><br><br>
+        </div><br><br><br><br><br><br><br><br><br><br><br>
+    </form>	
+  <div class="clear"></div>
+
+</body>
+</html>
